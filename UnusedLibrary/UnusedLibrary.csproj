@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="MSBuild.Sdk.Extras/3.0.22">
+
+  <PropertyGroup>
+    <TargetFrameworks>uap10.0.18362</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+
+    <AssemblyName>UnusedLibrary</AssemblyName>
+    <RootNamespace>UnusedLibrary</RootNamespace>
+
+	  <BaseOutputPath>bin\$(MSBuildProjectName)</BaseOutputPath>
+	  <BaseIntermediateOutputPath>obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
+
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	  <DefaultItemExcludes>$(DefaultItemExcludes);obj/**;bin/**</DefaultItemExcludes>
+
+    <DebugType>portable</DebugType>
+
+    <LangVersion>8.0</LangVersion>
+
+  </PropertyGroup>
+ 
+  <PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <!-- BLANKET PAGE AND COMPILE -->
+  <ItemGroup>
+    <Compile Include="**\*.shared.cs" Exclude="bin\**\*.cs;obj\**\*.cs"/>
+    <Compile Include="**\*.shared.*.cs" Exclude="bin\**\*.cs;obj\**\*.cs"/>
+    <Page Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="**\*.xaml.cs" Exclude="bin\**\*.xaml.cs;obj\**\*.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+
+</Project>
