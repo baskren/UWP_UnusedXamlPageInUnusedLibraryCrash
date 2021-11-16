@@ -13,26 +13,51 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Button Content="XAML" HorizontalAlignment="Center">
+        <Button Content="XAML" HorizontalAlignment="Center" >
             <Button.Flyout>
                 <MenuFlyout>
                     <MenuFlyoutSubItem Text="Options A">
+                        <MenuFlyoutSubItem.Icon>
+                            <SymbolIcon Symbol="Calculator"/>
+                        </MenuFlyoutSubItem.Icon>
                         <MenuFlyoutItem Text="Item A"/>
                         <MenuFlyoutItem Text="Item B"/>
                         <MenuFlyoutItem Text="Item C"/>
                     </MenuFlyoutSubItem>
                     <MenuFlyoutSubItem Text="Options B">
+                        <MenuFlyoutSubItem.Icon>
+                            <SymbolIcon Symbol="Paste"/>
+                        </MenuFlyoutSubItem.Icon>
                         <MenuFlyoutItem Text="Item D"/>
                         <MenuFlyoutItem Text="Item E"/>
                         <MenuFlyoutItem Text="Item F"/>
                     </MenuFlyoutSubItem>
                     <MenuFlyoutSubItem Text="Options C">
+                        <MenuFlyoutSubItem.Icon>
+                            <SymbolIcon Symbol="Save"/>
+                        </MenuFlyoutSubItem.Icon>
                         <MenuFlyoutItem Text="Item G"/>
                         <MenuFlyoutItem Text="Item H"/>
                         <MenuFlyoutItem Text="Item I"/>
                     </MenuFlyoutSubItem>
                 </MenuFlyout>
             </Button.Flyout>
+            <!--
+            <Button.Flyout>
+                <Flyout>
+                    <Flyout.FlyoutPresenterStyle>
+                        <Style TargetType="FlyoutPresenter">
+                            <Setter Property="ScrollViewer.HorizontalScrollMode"
+          Value="Disabled"/>
+                            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+                            <Setter Property="IsTabStop" Value="True"/>
+                            <Setter Property="TabNavigation" Value="Cycle"/>
+                        </Style>
+                    </Flyout.FlyoutPresenterStyle>
+                    <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </Flyout>
+            </Button.Flyout>
+            -->
         </Button>
 
     </Grid>

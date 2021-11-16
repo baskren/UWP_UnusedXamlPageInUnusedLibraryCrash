@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,5 +27,49 @@ namespace App3
         {
             this.InitializeComponent();
         }
+        /*
+        async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            /*
+            ContentDialog noWifiDialog = new ContentDialog()
+            {
+                Title = "No wifi connection",
+                Content = "Check connection and try again.",
+                CloseButtonText = "Ok"
+            };
+
+            await noWifiDialog.ShowAsync();
+            */
+            
+        /*
+
+            var popup = new Popup
+            {
+                IsOpen = true,
+                Width = 300,
+                Height = 300,
+                IsLightDismissEnabled = true,
+                VerticalOffset = 10,
+                HorizontalOffset = 200,
+                LightDismissOverlayMode = LightDismissOverlayMode.On,
+                Child = new Border
+                {
+                    Background = new SolidColorBrush(Colors.DarkGray),
+                    BorderBrush = new SolidColorBrush(Colors.Black),
+                    BorderThickness = new Thickness(1),
+                    //CornerRadius = new CornerRadius(5),
+                    Child = new ListView
+                    {
+                        ItemsSource = new List<string> { "Item A", "Item B", "Item C" }
+                    }
+                }
+            };
+
+            _grid.Children.Add(popup);
+            
+
+
+        }
+    */
     }
 }

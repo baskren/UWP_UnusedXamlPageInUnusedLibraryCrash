@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App3", "App3\App3.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnusedLibrary", "UnusedLibrary\UnusedLibrary.csproj", "{C4203C20-D016-4321-B507-67C460115413}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UwpLibrary", "UwpLibrary\UwpLibrary.csproj", "{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,26 @@ Global
 		{C4203C20-D016-4321-B507-67C460115413}.Release|x64.Build.0 = Release|Any CPU
 		{C4203C20-D016-4321-B507-67C460115413}.Release|x86.ActiveCfg = Release|Any CPU
 		{C4203C20-D016-4321-B507-67C460115413}.Release|x86.Build.0 = Release|Any CPU
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Debug|ARM.ActiveCfg = Debug|ARM
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Debug|ARM.Build.0 = Debug|ARM
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Debug|ARM64.Build.0 = Debug|ARM64
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Debug|x64.ActiveCfg = Debug|x64
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Debug|x64.Build.0 = Debug|x64
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Debug|x86.ActiveCfg = Debug|x86
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Debug|x86.Build.0 = Debug|x86
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Release|ARM.ActiveCfg = Release|ARM
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Release|ARM.Build.0 = Release|ARM
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Release|ARM64.ActiveCfg = Release|ARM64
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Release|ARM64.Build.0 = Release|ARM64
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Release|x64.ActiveCfg = Release|x64
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Release|x64.Build.0 = Release|x64
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Release|x86.ActiveCfg = Release|x86
+		{ACD0D1E0-C55B-4FFC-A4D9-501DFC1D98CC}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
