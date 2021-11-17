@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="UwpApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UwpApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="_grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button x:Name="_button" Content="XAML" HorizontalAlignment="Center" Click="Button_Click" >
+            <!--
+            <Button.Flyout>
+                <MenuFlyout>
+                    <MenuFlyoutSubItem Text="Options A">
+                        <MenuFlyoutSubItem.Icon>
+                            <SymbolIcon Symbol="Calculator"/>
+                        </MenuFlyoutSubItem.Icon>
+                        <MenuFlyoutItem Text="Item A"/>
+                        <MenuFlyoutItem Text="Item B"/>
+                        <MenuFlyoutItem Text="Item C"/>
+                    </MenuFlyoutSubItem>
+                    <MenuFlyoutSubItem Text="Options B">
+                        <MenuFlyoutSubItem.Icon>
+                            <SymbolIcon Symbol="Paste"/>
+                        </MenuFlyoutSubItem.Icon>
+                        <MenuFlyoutItem Text="Item D"/>
+                        <MenuFlyoutItem Text="Item E"/>
+                        <MenuFlyoutItem Text="Item F"/>
+                    </MenuFlyoutSubItem>
+                    <MenuFlyoutSubItem Text="Options C">
+                        <MenuFlyoutSubItem.Icon>
+                            <SymbolIcon Symbol="Save"/>
+                        </MenuFlyoutSubItem.Icon>
+                        <MenuFlyoutItem Text="Item G"/>
+                        <MenuFlyoutItem Text="Item H"/>
+                        <MenuFlyoutItem Text="Item I"/>
+                    </MenuFlyoutSubItem>
+                </MenuFlyout>
+            </Button.Flyout>
+            -->
+        </Button>
+
+    </Grid>
+</Page>

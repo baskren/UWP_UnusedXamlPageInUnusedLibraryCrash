@@ -1,33 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.11</Version>
-    </PackageReference>
-  </ItemGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{B4B61676-632D-4E89-809E-B48FF866A3F1}</ProjectGuid>
+    <ProjectGuid>{C722068C-1EDA-457F-8967-413882626C0E}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>App3</RootNamespace>
-    <AssemblyName>App3</AssemblyName>
+    <RootNamespace>UwpApp</RootNamespace>
+    <AssemblyName>UwpApp</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <!--
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
-    -->
-    <TargetPlatformVersion>10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.18362.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <!--
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
-    -->
     <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
@@ -64,7 +53,6 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
-    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
     <OutputPath>bin\ARM\Release\</OutputPath>
@@ -112,7 +100,6 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
-    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
@@ -164,9 +151,30 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UnusedLibrary\UnusedLibrary.csproj">
-      <Project>{c4203c20-d016-4321-b507-67c460115413}</Project>
-      <Name>UnusedLibrary</Name>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.12</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\P42.Uno.Controls\P42.Utils\P42.Utils.Uno\P42.Utils.Uno.UWP.csproj">
+      <Project>{bbfbac2d-289c-4bf4-bbf0-ba181e1160a6}</Project>
+      <Name>P42.Utils.Uno.UWP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UwpLibrary\UwpLibrary.csproj">
+      <Project>{acd0d1e0-c55b-4ffc-a4d9-501dfc1d98cc}</Project>
+      <Name>UwpLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\P42.Uno.Controls\P42.Uno.Controls\P42.Uno.Controls.UWP.csproj">
+      <Project>{cf75bc32-5521-4a91-8b59-c2f1be03dc96}</Project>
+      <Name>P42.Uno.Controls.UWP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\P42.Uno.Controls\P42.Uno.Markup\P42.Uno.Markup\P42.Uno.Markup.UWP.csproj">
+      <Project>{5698efa8-e24f-4edf-9342-1aae90d94044}</Project>
+      <Name>P42.Uno.Markup.UWP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\P42.Uno.Controls\P42.Utils\P42.Utils\P42.Utils.csproj">
+      <Project>{912d00b3-1218-4f55-9628-c6470cd9704f}</Project>
+      <Name>P42.Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
