@@ -83,6 +83,7 @@ namespace UnoApp
             this
                 .Padding(0)
                 .Margin(0)
+                .Left()
                 .Columns("auto", "*", 20, "auto");
 
 #if WINDOWS_UWP
