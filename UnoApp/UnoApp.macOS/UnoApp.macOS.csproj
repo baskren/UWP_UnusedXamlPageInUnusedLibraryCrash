@@ -106,18 +106,6 @@
     </BundleResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\P42.Uno.Controls\P42.Uno.Controls\P42.Uno.Controls.MacOS.csproj">
-      <Project>{317f82f4-2513-44e0-8ace-491c1548fe48}</Project>
-      <Name>P42.Uno.Controls.MacOS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\P42.Uno.Controls\P42.Uno.Markup\P42.Uno.Markup\P42.Uno.Markup.MacOS.csproj">
-      <Project>{7dd3184a-4eae-4f9f-a854-bbc99df5c4ba}</Project>
-      <Name>P42.Uno.Markup.MacOS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\P42.Uno.Controls\P42.Utils\P42.Utils.Uno\P42.Utils.Uno.MacOS.csproj">
-      <Project>{2f1ba177-75ca-481e-8f50-aefc8da8e364}</Project>
-      <Name>P42.Utils.Uno.MacOS</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\P42.Uno.Controls\P42.Utils\P42.Utils\P42.Utils.csproj">
       <Project>{912d00b3-1218-4f55-9628-c6470cd9704f}</Project>
       <Name>P42.Utils</Name>

@@ -37,7 +37,7 @@ namespace UwpApp
 
         internal static P42.Utils.Uno.DataTemplateSetSelector _selector = new DataTemplateSetSelector
         {
-            { typeof(P42.Uno.Controls.MenuFlyoutItemBase), typeof(CellTemplate) }
+            { typeof(P42.Uno.Controls.MenuItemBase), typeof(CellTemplate) }
         };
 
         public MainPage()
@@ -47,27 +47,27 @@ namespace UwpApp
 
         async void Button_Click(object sender, RoutedEventArgs e)
         {
-            var items = new List<P42.Uno.Controls.MenuFlyoutItemBase>
+            var items = new List<P42.Uno.Controls.MenuItemBase>
                     {
-                        new P42.Uno.Controls.MenuFlyoutSubItem { Text = "Group A", IconSource = new FontIconSource { FontFamily = new FontFamily("Segoe MDL2 Assets"), Glyph="\uE713"  }, Items =
+                        new P42.Uno.Controls.MenuGroup { Text = "Group A", IconSource = new FontIconSource { FontFamily = new FontFamily("Segoe MDL2 Assets"), Glyph="\uE713"  }, Items =
                             {
-                                new P42.Uno.Controls.MenuFlyoutItem { Text = "Item A", IconSource = new SymbolIconSource{ Symbol = Symbol.Calculator } },
-                                new P42.Uno.Controls.MenuFlyoutItem { Text = "Item B", IconSource = new SymbolIconSource { Symbol = Symbol.Save } },
-                                new P42.Uno.Controls.MenuFlyoutItem { Text = "Item C", IconSource = new SymbolIconSource { Symbol = Symbol.Scan } },
+                                new P42.Uno.Controls.MenuItem { Text = "Item A", IconSource = new SymbolIconSource{ Symbol = Symbol.Calculator } },
+                                new P42.Uno.Controls.MenuItem { Text = "Item B", IconSource = new SymbolIconSource { Symbol = Symbol.Save } },
+                                new P42.Uno.Controls.MenuItem { Text = "Item C", IconSource = new SymbolIconSource { Symbol = Symbol.Scan } },
                             }
                         },
-                        new P42.Uno.Controls.MenuFlyoutSubItem { Text = "Group B", IconSource = new SymbolIconSource { Symbol = Symbol.Send }, Items =
+                        new P42.Uno.Controls.MenuGroup { Text = "Group B", IconSource = new SymbolIconSource { Symbol = Symbol.Send }, Items =
                             {
-                                new P42.Uno.Controls.MenuFlyoutItem { Text = "Item E", IconSource = new SymbolIconSource { Symbol = Symbol.Share } },
-                                new P42.Uno.Controls.MenuFlyoutItem { Text = "Item F", IconSource = new SymbolIconSource { Symbol = Symbol.Sort } },
-                                new P42.Uno.Controls.MenuFlyoutItem { Text = "Item G", IconSource = new SymbolIconSource { Symbol = Symbol.Switch } },
+                                new P42.Uno.Controls.MenuItem { Text = "Item E", IconSource = new SymbolIconSource { Symbol = Symbol.Share } },
+                                new P42.Uno.Controls.MenuItem { Text = "Item F", IconSource = new SymbolIconSource { Symbol = Symbol.Sort } },
+                                new P42.Uno.Controls.MenuItem { Text = "Item G", IconSource = new SymbolIconSource { Symbol = Symbol.Switch } },
                             }
                         },
-                        new P42.Uno.Controls.MenuFlyoutSubItem { Text = "Group C", IconSource = new SymbolIconSource { Symbol = Symbol.List }, Items =
+                        new P42.Uno.Controls.MenuGroup { Text = "Group C", IconSource = new SymbolIconSource { Symbol = Symbol.List }, Items =
                             {
-                                new P42.Uno.Controls.MenuFlyoutItem { Text = "Item H", IconSource = new SymbolIconSource { Symbol = Symbol.Tag } },
-                                new P42.Uno.Controls.MenuFlyoutItem { Text = "Item I", IconSource = new SymbolIconSource { Symbol = Symbol.Target } },
-                                new P42.Uno.Controls.MenuFlyoutItem { Text = "Item J", IconSource = new SymbolIconSource { Symbol = Symbol.Sync } },
+                                new P42.Uno.Controls.MenuItem { Text = "Item H", IconSource = new SymbolIconSource { Symbol = Symbol.Tag } },
+                                new P42.Uno.Controls.MenuItem { Text = "Item I", IconSource = new SymbolIconSource { Symbol = Symbol.Target } },
+                                new P42.Uno.Controls.MenuItem { Text = "Item J", IconSource = new SymbolIconSource { Symbol = Symbol.Sync } },
                             }
                         },
                     };
@@ -119,22 +119,22 @@ namespace UwpApp
         {
             System.Diagnostics.Debug.WriteLine($"CellTemplate.DataContext = [{args.NewValue}]");
             Children.Clear();
-            if (args.NewValue is P42.Uno.Controls.MenuFlyoutItemBase baseItem)
+            if (args.NewValue is P42.Uno.Controls.MenuItemBase baseItem)
             {
                 if (baseItem.IconSource is IconSource iconSource)
                     Children.Add(new IconSourceElement { IconSource = iconSource }.Center().Margin(5,0));
                 if (baseItem.Text is string text)
                     Children.Add(new TextBlock { Text = text }.Margin(5,0).Column(1).CenterVertical());
-                if (args.NewValue is P42.Uno.Controls.MenuFlyoutSubItem subItem)
+                if (args.NewValue is P42.Uno.Controls.MenuGroup subItem)
                     Children.Add(new TextBlock { Text = "\uE76C", FontFamily = new FontFamily("Segoe MDL2 Assets") }.Margin(5,0).Column(3).CenterVertical().Right());
             }
         }
 
         async void OnItemTapped(object sender, TappedRoutedEventArgs e)
         {
-            if (DataContext is P42.Uno.Controls.MenuFlyoutItem item)
+            if (DataContext is P42.Uno.Controls.MenuItem item)
                 item.OnItemClicked();
-            else if (DataContext is P42.Uno.Controls.MenuFlyoutSubItem subItem)
+            else if (DataContext is P42.Uno.Controls.MenuGroup subItem)
             {
                 var popup = new P42.Uno.Controls.TargetedPopup(this)
                 {

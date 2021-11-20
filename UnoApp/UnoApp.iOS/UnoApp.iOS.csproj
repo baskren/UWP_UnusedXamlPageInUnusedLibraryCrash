@@ -171,18 +171,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\P42.Uno.Controls\P42.Uno.Controls\P42.Uno.Controls.iOS.csproj">
-      <Project>{107bffec-425d-432b-985e-375bcf8f18e9}</Project>
-      <Name>P42.Uno.Controls.iOS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\P42.Uno.Controls\P42.Uno.Markup\P42.Uno.Markup\P42.Uno.Markup.iOS.csproj">
-      <Project>{2f317ee3-6d07-439b-8b0a-d3aa62529642}</Project>
-      <Name>P42.Uno.Markup.iOS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\P42.Uno.Controls\P42.Utils\P42.Utils.Uno\P42.Utils.Uno.iOS.csproj">
-      <Project>{61da40e2-a5d6-416d-999f-d0d37a32d70f}</Project>
-      <Name>P42.Utils.Uno.iOS</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\P42.Uno.Controls\P42.Utils\P42.Utils\P42.Utils.csproj">
       <Project>{912d00b3-1218-4f55-9628-c6470cd9704f}</Project>
       <Name>P42.Utils</Name>

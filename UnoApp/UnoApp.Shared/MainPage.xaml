@@ -9,6 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="_button" Content="XAML" HorizontalAlignment="Center" Click="Button_Click" />
+        <Button x:Name="_button" Content="XAML" HorizontalAlignment="Center" />
     </Grid>
 </Page>
