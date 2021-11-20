@@ -43,6 +43,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
@@ -131,10 +132,6 @@
     <ProjectReference Include="..\..\P42.Uno.Controls\P42.Uno.Controls\P42.Uno.Controls.UWP.csproj">
       <Project>{cf75bc32-5521-4a91-8b59-c2f1be03dc96}</Project>
       <Name>P42.Uno.Controls.UWP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\P42.Uno.Controls\P42.Uno.Markup\P42.Uno.Markup\P42.Uno.Markup.UWP.csproj">
-      <Project>{5698efa8-e24f-4edf-9342-1aae90d94044}</Project>
-      <Name>P42.Uno.Markup.UWP</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\P42.Uno.Controls\P42.Utils\P42.Utils.Uno\P42.Utils.Uno.UWP.csproj">
       <Project>{bbfbac2d-289c-4bf4-bbf0-ba181e1160a6}</Project>

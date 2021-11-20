@@ -1,4 +1,4 @@
-﻿using P42.Uno.Markup;
+﻿///using P42.Uno.Markup;
 using P42.Utils.Uno;
 using System;
 using System.Collections.Generic;
@@ -28,7 +28,7 @@ namespace UnoApp
         public MainPage()
         {
             this.InitializeComponent();
-
+            
             var items = new List<P42.Uno.Controls.MenuItemBase>
                     {
                         new P42.Uno.Controls.MenuGroup { Text = "Group A", IconSource = new FontIconSource { FontFamily = new FontFamily("Segoe MDL2 Assets"), Glyph="\uE713"  }, Items =
@@ -58,12 +58,12 @@ namespace UnoApp
             {
                 Items = items
             };
-
+            
         }
 
     }
 
-
+    /*
     [Bindable]
     public partial class CellTemplate : Grid
     {
@@ -135,4 +135,5 @@ namespace UnoApp
         }
 
     }
+    */
 }
