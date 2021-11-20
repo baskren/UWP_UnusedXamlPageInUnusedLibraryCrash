@@ -53,7 +53,7 @@ namespace UnoApp
                             }
                         },
                     };
-
+            
             var popup = new P42.Uno.Controls.MenuFlyout(_button)
             {
                 Items = items
